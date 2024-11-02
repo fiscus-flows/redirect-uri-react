@@ -7,10 +7,8 @@ function App() {
     <Router>
       <div className="app-container">
         <Routes>
-          {/* Wildcard route to handle any auth redirect under the /auth path */}
-          <Route path="/redirect" element={<AuthRedirectHandler />} />
-          {/* Add a fallback for any other routes if needed */}
-          <Route path="*" element={<p>Page not found</p>} />
+          {/* Catch-all route to handle any path and render AuthRedirectHandler */}
+          <Route path="*" element={<AuthRedirectHandler />} />
         </Routes>
       </div>
     </Router>
