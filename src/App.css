@@ -1,0 +1,50 @@
+/* Base Fullscreen Layout */
+.auth-handler {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: var(--background);
+  }
+  
+  /* Content Styling */
+  .auth-content {
+	text-align: center;
+	padding: 60px;
+	border-radius: 12px;
+	max-width: 600px;
+	width: 100%;
+	background-color: var(--content-bg);
+	color: var(--content-text-color); /* Primary text color */
+	box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Text styling to ensure readability */
+  .auth-content h2 {
+	color: var(--content-text-color); /* Heading color */
+	font-size: 24px;
+	margin-bottom: 16px;
+  }
+  
+  .auth-content .status, .auth-content .countdown {
+	color: var(--content-text-color); /* Body and countdown color */
+	font-size: 18px;
+	margin-top: 10px;
+  }
+  
+  /* Light Mode */
+  :root {
+	--background: #f5f5f5;
+	--content-bg: #ffffff;
+	--content-text-color: #333333;
+  }
+  
+  /* Dark Mode */
+  @media (prefers-color-scheme: dark) {
+	:root {
+	  --background: #1e1e1e;
+	  --content-bg: #2b2b2b;
+	  --content-text-color: #f5f5f5;
+	}
+  }
+  
